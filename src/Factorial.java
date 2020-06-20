@@ -6,7 +6,7 @@ public class Factorial {
             return 1;
         }
         else {
-            return number * printFactorial(number -1); //noticed something
+            return number * printFactorial(number -1); //Recursion, calling method printFactorial within itself
 
         }
     }

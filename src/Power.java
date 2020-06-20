@@ -8,7 +8,7 @@ public class Power {
         else if (power==0)
             return 1;
 
-        else return base*raisingToThePower(base,power-1);
+        else return base*raisingToThePower(base,power-1); //Recursion
     }
 
     public static void main(String[] args) {
