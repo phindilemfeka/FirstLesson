@@ -15,22 +15,13 @@ public class Addition {
         String response;
 
         do {
-
             sum = firstNumber + secondNumber;
+            System.out.println("The sum is: "+sum);
 
-            System.out.print("The sum is: ");
-            System.out.println(sum);
+            System.out.println("Enter Y to repeat otherwise N: ");
+            response = scan.nextLine().toLowerCase();
 
-        } while (false);
-
-        System.out.println("To repeat enter y: ");
-        response = scan.nextLine().toLowerCase();
-        if (response.equals("y")){
-            addTwoNumbers();
-        }else {
-            System.out.println("invalid");
-        }
-
+        } while(response.contains("y")); //In a case of "yes" as a response
     }
 
     public static void main(String[] args) {
