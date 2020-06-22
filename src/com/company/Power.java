@@ -1,3 +1,5 @@
+package com.company;
+
 public class Power {
 
     static int raisingToThePower(int base, int power){

@@ -1,3 +1,5 @@
+package com.company;
+
 public class Factorial {
 
     static int printFactorial(int number){
