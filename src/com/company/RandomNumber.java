@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Collection;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,27 +12,37 @@ public class RandomNumber {
         //System.out.println(random);
 
         int guessedRandom = 0;
+        int counter = 1;
+        //System.out.println("You have five chances to guess a random number.");
 
-        while (guessedRandom<100) {
+        while (guessedRandom!=random) {
 
-            System.out.println("Guess the random number:");
-            Scanner scan = new Scanner(System.in);
-            guessedRandom= scan.nextInt();
+            if (counter<=100) {
 
-            if (guessedRandom > random) {
-                System.out.println("Number is higher than random");
-            } else if (guessedRandom < random) {
-                System.out.println("Number is lower than random");
-            } else {
-                System.out.println("correct");
+                System.out.println("Enter here to guess: ");
+                Scanner scan = new Scanner(System.in);
+                guessedRandom= scan.nextInt();
+
+                if (guessedRandom > random) {
+                    System.out.println("Number is higher than random");
+
+                } else if (guessedRandom < random) {
+                    System.out.println("Number is lower than random");
+
+                } else {
+                    System.out.println("Congratulations, you are correct!!");
+                        break;
+                }
+                counter++;
+
+            }else {
+                System.out.println("Sorry, you have exceeded the number of guesses");
                 break;
             }
         }
     }
 
-
     public static void main(String[] args) {
         RandomNumber.generateRandomNumber();
-
     }
 }
